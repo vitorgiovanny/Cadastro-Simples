@@ -28,17 +28,13 @@ public class main {
         Usuario usuarios = new Usuario(cadastros);
         Date data = new Date("01/01/1900");
         
-        cad.cadastrar("vitor", "06586181569", data);
-        cad2.cadastrar("giovanny", "91929123192", data);
+        cad.cadastrarPessoaCpf("vitor", "00000000000", data);
+        cad2.cadastrarPessoaCnpj("giovanny", "91929123192", data);
         
         cadastros.add(cad);
         cadastros.add(cad2);
         
         usuarios.ListUsersNames();
         
-       /*for(int i = 0; i<usuarios.listUsuaria(cadastros).size();i++){
-           System.out.println(usuarios.listUsuaria(cadastros).get(i).getNome());
-       }*/
-       
     }
 }
