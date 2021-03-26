@@ -28,7 +28,7 @@ public class main {
         Usuario usuarios = new Usuario(cadastros);
         Date data = new Date("01/01/1900");
         
-        cad.cadastrarPessoaCpf("vitor", "00000000000", data);
+        cad.cadastrarPessoaCpf("vitor",  "00000000000", data);
         cad2.cadastrarPessoaCnpj("giovanny", "91929123192", data);
         
         cadastros.add(cad);

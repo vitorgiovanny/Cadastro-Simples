@@ -53,7 +53,7 @@ public class Cadastro implements iPessoa {
             return null;
     }
     
-    public String verificarCnpj(String cnpj){
+    private String verificarCnpj(String cnpj){
         String cnpj_mask;
         if(cnpj.length()<15){
         cnpj_mask = StringUtils.left(cnpj, 2) + 
