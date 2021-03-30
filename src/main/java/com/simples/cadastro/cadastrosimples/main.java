@@ -6,6 +6,8 @@
 package com.simples.cadastro.cadastrosimples;
 
 import com.simples.cadastro.cadastrosimples.Cadastro.Cadastro;
+import com.simples.cadastro.cadastrosimples.Cadastro.TipoUsuario;
+import com.simples.cadastro.interfaces.iPessoa;
 import com.simples.cadastro.usuario.Usuario;
 import java.util.ArrayList;
 import java.util.Date;
@@ -19,22 +21,10 @@ import java.util.ListIterator;
  */
 public class main {
     public static void main(String[] args) {
-        List <Cadastro> cadastros;
-        cadastros = new ArrayList<Cadastro>();
-      
-        Cadastro cad = new Cadastro(null);
-        Cadastro cad2 = new Cadastro(null);
-        
-        Usuario usuarios = new Usuario(cadastros);
-        Date data = new Date("01/01/1900");
-        
-        cad.cadastrarPessoaCpf("vitor",  "00000000000", data);
-        cad2.cadastrarPessoaCnpj("giovanny", "91929123192", data);
-        
-        cadastros.add(cad);
-        cadastros.add(cad2);
-        
-        usuarios.ListUsersNames();
+        iPessoa usuario  = Cadastro.criarUsuario(TipoUsuario.CPF);
+        Date nascimento = new Date("06/01/1996");
+        usuario.cadastrarPessoaCpf("vitor", "00000000000", nascimento);
+        System.out.println(usuario.getCpf());
         
     }
 }

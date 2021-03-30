@@ -24,8 +24,13 @@ public class Usuario {
         Iterator<Cadastro> cads = this.cadastro.iterator();
         while(cads.hasNext()){
             Cadastro it = cads.next();
-            System.out.println(it.getNome());
-            System.out.println(it.getDataNascimento());
+            //System.out.println(it.getNome());
+            //System.out.println(it.getDataNascimento());
         }
+    }
+    
+    public Cadastro getUsuarios(String civil){
+        
+        return null;
     }
 }
