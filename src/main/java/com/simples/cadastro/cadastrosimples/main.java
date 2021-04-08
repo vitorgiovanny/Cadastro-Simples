@@ -8,12 +8,7 @@ package com.simples.cadastro.cadastrosimples;
 import com.simples.cadastro.cadastrosimples.Cadastro.Cadastro;
 import com.simples.cadastro.cadastrosimples.Cadastro.TipoUsuario;
 import com.simples.cadastro.interfaces.iPessoa;
-import com.simples.cadastro.usuario.Usuario;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
 
 /**
  *
