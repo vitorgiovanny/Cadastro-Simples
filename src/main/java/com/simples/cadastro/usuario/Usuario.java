@@ -14,23 +14,27 @@ import java.util.List;
  *
  * @author vitor
  */
-public class Usuario {
-    private List<Cadastro> cadastro;
-    public Usuario(List<Cadastro> value){
-        this.cadastro = value;
-    }
+public class Usuario implements Iterator {
+    private Cadastro[] cadastro;
+    private int posicao = 0;
     
-    public void ListUsersNames(){
-        Iterator<Cadastro> cads = this.cadastro.iterator();
-        while(cads.hasNext()){
-            Cadastro it = cads.next();
-            //System.out.println(it.getNome());
-            //System.out.println(it.getDataNascimento());
-        }
+    public Usuario(Cadastro[] cad){
+       
+        this.cadastro = cad;
     }
-    
-    public Cadastro getUsuarios(String civil){
-        
-        return null;
+
+    @Override
+    public boolean hasNext() {
+       if(this.posicao>= this.cadastro.length || this.cadastro[this.posicao] == null){
+           return false;
+       }
+       return true;
+    }
+
+    @Override
+    public Object next() {
+       Cadastro cadastro = this.cadastro[this.posicao];
+       this.posicao++;
+       return cadastro;
     }
 }
